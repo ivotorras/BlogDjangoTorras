@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% block contenido %}
+<html>
+    <head>
+        <style>
+           body{
+    
+    background-color: coral;    
+}
+
+
+.sa{
+    background-color: cadetblue;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 31%;
+    margin-right: 31%;
+}
+.inputstyle {
+    font-family: Arial;
+    font-size: 20pt;
+    background-color: #00FF00"
+    }    
+    
+.button{
+    border-radius: 5px;
+    background-color: #FF3C3C;
+    border: none;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 100px;
+    margin: 5px;
+    }    
+
+        </style>
+
+        <body class="red">
+<input onkeypress = "return numeros(event)" id="display" type="text" name="fname" size="32" class="inputstyle"> <BR> </BR> 
+  
+
+    
+<td><input type = "button" value = "7" onclick=" mostrar (value)" class = "button"></td>
+<td><input type = "button" value = "8" onclick=" mostrar (value)" class = "button"></td>
+<td><input type = "button" value = "9" onclick=" mostrar (value)" class = "button"></td>
+<td><input type = "button" value = "/" onclick=" mostrar (value)" class = "button"></td><BR></BR>
+<td><input type = "button" value = "4" onclick=" mostrar (value)" class = "button"></td>
+<td><input type = "button" value = "5" onclick=" mostrar (value)" class = "button"></td>
+<td><input type = "button" value = "6" onclick=" mostrar (value)" class = "button"></td>
+    <td><input type = "button" value = "*" onclick=" mostrar (value)" class = "button"></td><BR></BR>
+<td><input type = "button" value = "1" onclick=" mostrar (value)" class = "button"></td>
+<td><input type = "button" value = "2" onclick=" mostrar (value)" class = "button"></td>
+<td><input type = "button" value = "3" onclick=" mostrar (value)" class = "button"></td>
+<td><input type = "button" value = "-" onclick=" mostrar (value)" class = "button"></td><BR></BR>
+<td><input type = "button" value = "d" onclick="borrar ()" class = "button"></td>
+<td><input type = "button" value = "0" onclick=" mostrar (value)" class = "button"></td>
+<td><input type = "button" value = "=" onclick="resultado()" class = "button"></td>
+<td><input type = "button" value = "+" onclick=" mostrar (value)" class = "button"></td><BR></BR>
+
+
+<script>
+
+var calculo="";
+
+function borrar(){
+    var borro = document.a.display.value;
+    var nuevo = borro.substring(0,borro.length -1);
+    document.getElementById("display").value = nuevo;
+    
+}     
+     
+function borrotodo(){
+    
+document.getElementById("display").value = "";
+}     
+     
+function numeros(e){
+    
+key = e.keycode || e.which;
+    
+    teclado = String.fromCharCode (key);
+    
+    nums = "123456789/*-+0";
+    
+    if (nums.indexOf(teclado) == -1){
+        return false;
+    }  
+    
+}
+
+ function mostrar(id){       
+  
+var operacion = document.a.display.value;
+document.getElementById("display").value = operacion + id;
+    
+}    
+    
+function resultado(){
+   
+    calculo = document.a.display.value;
+    document.getElementById("display").value=calculo;
+    
+    eval(calculo);
+    
+    document.a.display.value = eval(calculo);
+    
+} 
+          
+function cambioCss(){
+		var link = document.getElementById("cssArchivo");
+		var css = document.a.cssCambiar;
+		link.href = css.value;		
+	};      
+    
+
+</script>
+        
+        
+        
+        
+        
+        
+        </body>
+        
+        
+    
+    
+    
+    </head>
+
+
+
+
+    </html>
+
+
+{% endblock %}

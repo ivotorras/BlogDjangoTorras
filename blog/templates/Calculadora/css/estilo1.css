@@ -1,0 +1,35 @@
+body{
+    
+    background-color: bisque;    
+}
+
+
+.sa{
+    background-color: cadetblue;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: 31%;
+    margin-right: 31%;
+}
+.inputstyle {
+    font-family: Arial;
+    font-size: 20pt;
+    background-color: #00FF00"
+    }    
+    
+.button{
+    border-radius: 5px;
+    background-color: #DF3C3A;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 100px;
+    margin: 5px;
+    } 
+
+.button:hover{
+    background-color: #F5AB7A;
+    
+}
+

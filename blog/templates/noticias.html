@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% block contenido %}
+
+
+<html>	
+    <head>
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="/static/css/materialize.css"  media="screen,projection"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <!-----------------------------------------------| IMPORTAR |-------------------------------------------------------------->
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="/static/css/materialize.css">
+        <div class="left-align">
+            </head>
+        <body class="red">
+
+            {% for post in posts %}
+            <div class="post-preview">
+                <a href="{% url 'nano:vermipost' post.id %}">
+                    
+<font face="ubuntu" size="7">{{post.titulo}}</font><br></br>
+
+                </a>
+            </div>
+            <hr>
+            {% endfor %}
+            
+            
+            
+            
+            
+
+            <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+            <script type="text/javascript" src="js/materialize.js"></script>
+        </body>
+
+  <a href="http://127.0.0.1:8000/admin/blog/entrada/" target="_blank">Crear y eliminar comentarios</a>
+        
+
+  </html>
+        {% endblock %}  
+  
+    

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+
+<article>
+    <div class="container">     
+                <h2 class="section-heading">{{post.titulo}}</h2>
+
+
+<font face="ubuntu" size="5">{{post.contenido}}</font><br></br>
+<font face="ubuntu" size="3">{{post.fecha}}</font>
+            
+    </div>
+</article>
+
+<style>
+
+            .nav-wrapper{
+                background-color: #E53935 !important;
+            }  
+    
+    
+</style>
+
+
+
+{% endblock %} 
+

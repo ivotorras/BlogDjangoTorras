@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+{% block contenido %}
+
+<html>
+    
+    
+    
+        <link type="text/css" rel="stylesheet" href="/static/css/materialize.css"  media="screen,projection"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <!-----------------------------------------------| IMPORTAR |-------------------------------------------------------------->
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" href="/static/css/materialize.css">
+    
+    
+    
+    
+    <body class="red">
+        
+        <div>
+<br>
+<br>
+    <label for="fname">___Nombre y APELLIDO:</label>
+    <input type="text" id="fname" name="firstname">
+
+    <label for="lname">___DNI:</label>
+    <input type="text" id="lname" name="lastname">
+
+    <label for="country">___Provincia:</label>
+    <select id="country" name="country">
+      <option value="cordoba">Cordoba</option>
+      <option value="bsas">Buenos Aires</option>
+      <option value="mendoza">Mendoza</option>
+      <option value="chaco">Chaco</option>
+      <option value="entrios">Entre Rios</option>
+    </select>
+  
+  <div id="n" onmouseover="mover()"><font size="5">Siguiente</font></div>
+
+</div>
+<style>
+#n {
+    position: fixed;
+    font-size: 25px;
+    color:black;
+    width: ;
+    height: 1;
+    text-align: center;
+    border-radius: 12px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 5px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+
+
+
+
+
+            .nav-wrapper{
+                background-color: #E53935 !important;
+            }  
+    
+    
+</style>    
+
+
+<script>
+function mover() {
+        var div = document.getElementById("n");
+        var a = Math.random();
+        var a = a*1000;
+        var b = Math.random();
+        var b = b*600;
+        console.log(a);
+        div.style.left = a;
+        div.style.top = b;
+}
+    
+    
+</script>
+    </body>
+{% endblock %}
